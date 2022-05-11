@@ -1,0 +1,27 @@
+//1 to get the users array
+###
+GET http://localhost:6000/users
+
+
+
+//2 to send the user with password  from the client end
+###
+POST http://localhost:6000/users
+Content-Type: application/json
+
+{
+    "name" : "kyle",
+    "password" : "password1"
+}
+
+
+
+// 3 try to login and compare the pasword with stored passwords
+###
+POST http://localhost:6000/users/login
+Content-Type: application/json
+
+{
+    "name" : "kyle",
+    "password" : "password"
+}
